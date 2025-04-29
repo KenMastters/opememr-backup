@@ -1,7 +1,5 @@
-# Ignorar archivos sensibles y pesados
 *.tar.gz
-*.sql
-sqlconf.php
-sites/*/sqlconf.php
 *.log
+sqlconf.php
+
 
