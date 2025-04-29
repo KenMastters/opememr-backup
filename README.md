@@ -13,14 +13,25 @@ Este repositorio contiene una copia completamente funcional de OpenEMR 7.0.2, li
 
 ## 📥 Descarga de archivos y preparación
 
-### Opción recomendada: Subir archivos desde tu PC al servidor
+### Si estás trabajando en **localhost** (misma máquina)
+
+No es necesario usar `scp`, simplemente copia los archivos usando `cp`:
+
+```bash
+sudo cp ~/openemr_db_backup.sql /home/david/
+sudo cp ~/openemr_files_backup.tar.gz /home/david/
+```
+
+Luego sigue los pasos de restauración normales.
+
+### Si estás en un **servidor real (externo)**
 
 Supón que ya tienes estos archivos en tu PC local:
 
 - `openemr_db_backup.sql`
-- `openemr_files_backup.tar.gz` (puedes descargarlo desde [este enlace de Google Drive](https://drive.google.com/file/d/12q3hdjar5PducnPK1I3j8Bo1SkwUpRAB/view?usp=sharing))
+- `openemr_files_backup.tar.gz` (descargado desde [este enlace de Google Drive](https://drive.google.com/file/d/12q3hdjar5PducnPK1I3j8Bo1SkwUpRAB/view?usp=sharing))
 
-#### 1. Abre una terminal en tu PC y usa `scp` para subirlos al servidor:
+Usa `scp` para subirlos:
 
 ```bash
 scp openemr_db_backup.sql tu_usuario@ip_del_servidor:/home/tu_usuario/
@@ -28,15 +39,6 @@ scp openemr_files_backup.tar.gz tu_usuario@ip_del_servidor:/home/tu_usuario/
 ```
 
 📌 Cambia `tu_usuario` por tu nombre de usuario en el servidor (ej: `david`) y `ip_del_servidor` por la IP real.
-
-#### 2. Luego, en el servidor, muévete a tu carpeta de inicio y verifica:
-
-```bash
-cd ~
-ls
-```
-
-Deberías ver ambos archivos listos.
 
 ---
 
@@ -120,4 +122,4 @@ Usa estas credenciales iniciales:
 
 ---
 
-✅ Esta guía te permite restaurar en minutos una instalación operativa de OpenEMR tal como fue guardada.
+✅ Esta guía completa te permitirá restaurar OpenEMR correctamente en localhost o en servidor real.
