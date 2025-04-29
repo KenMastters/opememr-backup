@@ -89,7 +89,8 @@ sudo systemctl restart apache2
 ```
 http://IP_DEL_SERVIDOR/openemr
 ```
-
+Usuario: david_admin1234
+Password: 123456789123
 ---
 
 ✅ Esta guía te permite restaurar en minutos una instalación operativa sin necesidad de instalar desde cero.
